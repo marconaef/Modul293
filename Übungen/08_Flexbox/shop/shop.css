@@ -33,13 +33,13 @@ nav{
 nav img{
     width: 50px;
     height: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: 0px;
 }
 
 nav span{
     margin-top: auto;
     margin-bottom: auto;
+    order: 2;
 }
 
 .item{
@@ -52,7 +52,7 @@ nav span{
     align-items: flex-start;
 }
 
-.container img{ 
+.item img{ 
     width: 90%;
     order: 1;
     margin: 5%;
@@ -83,6 +83,10 @@ ul{
     font-size: 0.9rem;
 }
 
+.img-item{
+    display: flex;
+}
+
 @media print{
     .item button{
         display: none;
@@ -97,18 +101,17 @@ ul{
         grid-template-columns: auto;
         grid-template-rows: auto auto;
     }
-    nav{
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto;
-        align-items: center;
+    .img-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
 }
 
 @media (max-width: 500px){
     nav {
-        grid-template-rows: auto;
-        grid-template-columns: auto auto auto;
+        flex-direction: column;
     }
     nav span {
         display: none;
